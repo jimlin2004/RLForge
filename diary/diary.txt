@@ -1,0 +1,4 @@
+20240810
+	1. 上傳至github
+	2. 初步完成DQN實驗
+	3. 由chartGPT命名此package為 RLForge
