@@ -2,7 +2,7 @@ import gymnasium as gym
 import torch as th
 
 class Env(object):
-    def __init__(self, device: th.device, gameName: str, render_mode = "rgb_array", maxEpisodeTimestep = None):
+    def __init__(self, gameName: str, device: th.device, render_mode = "rgb_array", maxEpisodeTimestep = None):
         if (maxEpisodeTimestep is None):
             self.env = gym.make(gameName, render_mode = render_mode)
         else:

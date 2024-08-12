@@ -2,3 +2,6 @@
 	1. 上傳至github
 	2. 初步完成DQN實驗
 	3. 由chartGPT命名此package為 RLForge
+20240812
+	1. BaseAgent新增save model的method
+	2. utils新增setRandomSeed的function

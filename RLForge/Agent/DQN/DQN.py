@@ -113,5 +113,12 @@ class DQN(BaseAgent):
         while (self.currTimestep < totalTimestep):
             episodeCnt += 1
             self.currTimestep += self.runOneEpisode()
+            self.logger["time/current timestep"] = self.currTimestep
             self.logger["time/episode"] = episodeCnt
             self.logger.summary()
+
+    def save(self, dirPath: str):
+        th.save(self.Q.state_dict(), dirPath + "/DQN.pth")
+    def load(self, modelPath: str):
+        loaded = th.load(modelPath)
+        self.Q.load_state_dict(loaded)

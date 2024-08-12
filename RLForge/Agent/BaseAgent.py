@@ -34,3 +34,9 @@ class BaseAgent(object):
     @abc.abstractmethod
     def storeTransition(self, s, a, ns, r, d):
         raise NotImplementedError
+    @abc.abstractmethod
+    def save(self, dirPath: str):
+        '''
+        param:
+            dirPath: 欲存模型的資料夾路徑，ex: "./saved"，最後面不需要'/'
+        '''
